@@ -20,7 +20,7 @@ cat > "run.${id}__${version}.kterm.sh" <<'EOF'
 #!/bin/sh
 cd "$(dirname "$0")" || exit
 EOF
-echo "/mnt/extensions/kterm/bin/kterm.sh -e \"\$0\"'/run-distribution.sh $1'" >> "run.${id}__${version}.kterm.sh"
+echo "/mnt/us/extensions/kterm/bin/kterm.sh -e \"\$0\"'/run-distribution.sh $1'" >> "run.${id}__${version}.kterm.sh"
 chmod +x "run.${id}__${version}.kterm.sh"
 cat <<EOF
 {"name": "Run $id $version / kterm",
