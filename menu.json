@@ -1,10 +1,14 @@
 {
+	"items": [
+	{
+		"name": "KindleLinuxDeploy",
+		"priority": 0,
     "items": [
 {"name": "Run alpine 3.9.0 / kterm",
  "priority": 1,
- "action": "/mnt/extensions/kterm/bin/kterm.sh './run-distribution.sh alpine.3.9.0.armhf.sh'"},
+ "action": "./run.alpine__3.9.0.kterm.sh"},
         {"name": "RefreshMenu",
          "priority": 0,
          "action": "./refresh-menu.sh"}
     ]
-}
+}]}
