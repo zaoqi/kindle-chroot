@@ -34,7 +34,7 @@ FaiL(){
 if [ ! -d "$rootfs_dir" ] ;then
     mkdir "$rootfs_dir" || ErroR
     pre_install || FaiL
-    TemP_TaR="$(mktemp)"
+    TemP_TaR="$(mktemp)" # WARNING [TODO] Kindle的/tmp空間有時很可能不足
     rm "$TemP_TaR" || FaiL
     wget -O "$TemP_TaR" "$rootfs_url"
     [ $("${rootfs_sum_type}sum" "$TemP_TaR" | awk '{print $1}') = "${rootfs_sum_value}" ] || FaiL
