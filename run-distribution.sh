@@ -1,5 +1,5 @@
 #!/bin/sh
-ErroR(){
+ErroR(){ # [TODO] 清理
     echo installation failed >&2
     echo press enter to continue >&2
     read
@@ -24,7 +24,7 @@ rootfs_dir="$PWD/rootfs/${id}__${version}"
 mkdir -p "/tmp/__KindleLinuxDeploy__" || ErroR
 lockdir="/tmp/__KindleLinuxDeploy__/${id}__${version}"
 
-FaiL(){
+FaiL(){ # [TODO] 清理
     post_install_failed
     echo installation failed >&2
     echo press enter to continue >&2
